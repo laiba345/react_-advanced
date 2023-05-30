@@ -21,3 +21,42 @@
 
 4. 前端路由的原理(靠着浏览器的history来进行路由跳转)
 
+5. react-router-dom(专门给web人员使用)的理解
+- react的一个插件库
+- 专门用来实现一个SPA应用
+- 基于react的项目基本都会用到此库
+
+6. 印记中文(推荐)
+
+7. react router for web
+- 下载：npm i react-router-dom
+- 此处需要下载：npm i react-router-dom@5
+
+8. 书写路由的步骤
+- 区分导航区和展示区
+- 步骤：点击导航链接引起路径变化； 路径的变化被路由器监测到，进行匹配组件然后展示
+- **单页面，多组件**
+
+9. html文件抽取成组件
+
+10. 使用ctrl+/ 来进行注释
+
+11. 路由跳转
+- 原生html中，靠<a>跳转不同的页面
+- 在React中靠路由链接实现切换组件--编写路由链接
+
+12. 注册路由
+- 是自结束标签
+
+13. 路由的最基本使用;在最外面包裹BrowserRouter
+```
+ReactDOM.render(
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>,
+	document.getElementById('root')
+)
+```
+
+
+
