@@ -49,6 +49,8 @@
 - 是自结束标签
 
 13. 路由的最基本使用;在最外面包裹BrowserRouter
+- 整个路由用一个路由器扩起来才行
+- 在index.js中全部包裹起来才行
 ```
 ReactDOM.render(
 	<BrowserRouter>
@@ -58,5 +60,23 @@ ReactDOM.render(
 )
 ```
 
+14. 根据路由地址进行相关跳转操作
+```
+{/* 注册路由 */}
+<Route path="/about" component={About} />
+<Route path="/home" component={Home} />
+```
+
+15. **总结:路由的基本使用
+    1.明确好界面中的导航区、展示区
+    2.导航区的a标签改为Link标签(通过Link标签来实现组件的切换操作)
+    ```
+    <Link to="/xxxxx">Demo</Link>
+    ```
+    3.展示区写Route标签进行路径的匹配
+    ```
+    <Route path='/xxxx' component={Demo}/>
+    ```
+    4.**<App>的最外侧包裹了一个<BrowserRouter>或<HashRouter>**
 
 
