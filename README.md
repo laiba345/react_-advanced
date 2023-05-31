@@ -70,7 +70,7 @@
 		url: "/about"
 
 ## 五、NavLink与封装NavLink
-1.NavLink可以实现路由链接的高亮，通过activeClassName指定样式名
+	1.NavLink可以实现路由链接的高亮，通过`activeClassName`指定样式名
 
 ## 六、Switch的使用
 1.通常情况下，path和component是一一对应的关系。
