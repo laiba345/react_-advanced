@@ -118,12 +118,12 @@
 
 
 ## 十二、编程式路由导航
-	借助this.prosp.history对象上的API对操作路由跳转、前进、后退
-			-this.prosp.history.push()
-			-this.prosp.history.replace()
-			-this.prosp.history.goBack()
-			-this.prosp.history.goForward()
-			-this.prosp.history.go()
+- 借助this.prosp.history对象上的API对操作路由跳转、前进、后退
+	-this.prosp.history.push()
+	-this.prosp.history.replace()
+	-this.prosp.history.goBack()
+	-this.prosp.history.goForward()
+	-this.prosp.history.go()
 
 ## 十三、BrowserRouter与HashRouter的区别
 1.底层原理不一样：
