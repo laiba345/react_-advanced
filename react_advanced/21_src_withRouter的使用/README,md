@@ -1,0 +1,30 @@
+# withRouter（加工一般组件，使其变成路由组件）
+- 实现的需求：等3s以后实现路由的跳转工作；**可以在钩子中进行**
+
+- 路由中最后一个知识点的使用withRouter
+
+- 案例：在头部React Router 也设置两个按钮，来进行页面的跳转
+
+- 点击事件如果不需要传递参数就是直接定义方法，然后在render() 上方
+书写相应的跳转方法才行
+
+- history等不能无条件使用，需要路由组件才能使用
+
+- **如何让一般组件也能使用路由组件身上的API呢**
+- 区别于Vue，在vue实例身上都有相关的路由属性和方法
+
+## withRouter总结
+- withRouter可以加工一般组件，让一般组件具备路由组件所特有的API
+- withRouter的返回值是一个新组件
+
+## BrowserRouter与HashRouter的区别
+  1.底层原理不一样：
+      BrowserRouter使用的是H5的history API，不兼容IE9及以下版本。
+      HashRouter使用的是URL的哈希值。
+  2.path表现形式不一样
+      BrowserRouter的路径中没有#,例如：localhost:3000/demo/test
+      HashRouter的路径包含#,例如：localhost:3000/#/demo/test
+  3.刷新后对路由state参数的影响
+      (1).BrowserRouter没有任何影响，因为state保存在history对象中。
+      (2).HashRouter；**刷新后会导致路由state参数的丢失**
+  4.备注：HashRouter可以用于解决一些路径错误相关的问题。
