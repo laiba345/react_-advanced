@@ -19,7 +19,7 @@
 				"eject": "react-scripts eject"
 			},
 		....
-	3.根目录下创建config-overrides.js
+	3.根目录下创建config-overrides.js  + 自己加的：yarn add babel-plugin-import 
 		//配置具体的修改规则
 		const { override, fixBabelImports,addLessLoader} = require('customize-cra');
 		module.exports = override(
@@ -29,6 +29,7 @@
 				style: true,
 			}),
 			addLessLoader({
+                // 这里有个坑，配置目前已经被修改了，使用新属性来配置
 				lessOptions:{
 					javascriptEnabled: true,
 					modifyVars: { '@primary-color': 'green' },
@@ -36,3 +37,11 @@
 			}),
 		);
 	4.备注：不用在组件里亲自引入样式了，即：import 'antd/dist/antd.css'应该删掉
+
+### 自定义主题
+- antd(less) => css 
+- 我们要用的就是修改底层的less文件，
+
+做法：
+1. yarn add less less-loader
+2. 配置文件其实就是上述配置文件的最终版本
